@@ -2,12 +2,12 @@
 
 ## todo
 (a.) Backend
-1. Restarting of server setup
-2. Error handling on api
+1. Restarting of server setup > done!
+2. Error handling on api 
 3. Handle undefined/user bad request
 4. Test with Jest
 5. Separation of concern
-6. Change api url to environment variable
+6. Change api url to environment variable  > done!
 
 (b.) Frontend
 1. Build UI (Search button, search component, card component, button component, error component, loading component)
