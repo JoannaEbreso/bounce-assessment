@@ -31,13 +31,13 @@ app.get('/api/country/:name', async(req, res) => {
   try{
     country_details = await (await fetch(url)).json()
     if (country_details.status != 200){
-      res.status(400).json({error: country_details?.message || 'api error'})
+      // res.status(400).json({error: country_details?.message || 'api error'})
+      throw new Error(country_details?.message || 'api error')
     }
+    res.json({ message: 'Data successfully retrieved!',data: country_details});
   }catch(error){
-    console.log(error, 'an error ocurred')
+    res.status(400).json({error: error.message});
   }
-  console.log("testing nodemon")
-  res.json({ message: 'Data successfully retrieved!',data: country_details});
 });
 
 
