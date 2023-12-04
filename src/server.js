@@ -30,7 +30,8 @@ app.get('/api/country/:name', async(req, res) => {
   let country_details = []
   try{
     country_details = await (await fetch(url)).json()
-    if (country_details.status != 200){
+    console.log(country_details.status)
+    if (country_details.status && country_details.status > 200){
       // res.status(400).json({error: country_details?.message || 'api error'})
       throw new Error(country_details?.message || 'api error')
     }
@@ -49,3 +50,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = app

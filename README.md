@@ -5,7 +5,7 @@
 1. Restarting of server setup > done!
 2. Error handling on api > done!
 3. Handle undefined/user bad request > done!
-4. Test with Jest
+4. Test with Jest > done!
 5. Separation of concern
 6. Change api url to environment variable  > done!
 
